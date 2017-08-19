@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package rpii;
+package raca;
+
+import rpii.Classe;
+import rpii.Jogador;
 
 /**
  *
@@ -11,10 +14,9 @@ package rpii;
  */
 public class Orc extends Jogador{
 
-    public Orc(String nome, int level, int inteligencia, int resistencia, int forca, int agilidade, int destreza, int bVida) {
-        super(nome, level, inteligencia, resistencia, forca, agilidade, destreza, bVida);
+    public Orc(String nome, Classe classeJogador) {
+        super(nome, classeJogador);     
     }
-
     @Override
     public void Atacar() {
     }

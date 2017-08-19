@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package rpii;
+package inimigos;
 
 /**
  *
  * @author unipampa
  */
-public class Undead extends Jogador{
+public class AnaoIA extends Inimigo{
 
-    public Undead(String nome, int level, int inteligencia, int resistencia, int forca, int agilidade, int destreza, int bVida) {
-        super(nome, level, inteligencia, resistencia, forca, agilidade, destreza, bVida);
+    public AnaoIA(String nome, int inteligencia, int resistencia, int forca, int agilidade, int destreza, int bVida) {
+        super(nome, inteligencia, resistencia, forca, agilidade, destreza, bVida);
     }
 
     @Override
@@ -21,10 +21,6 @@ public class Undead extends Jogador{
 
     @Override
     public void Defender() {
-    }
-
-    @Override
-    public void Fugir() {
     }
 
     @Override
@@ -41,20 +37,6 @@ public class Undead extends Jogador{
 
     @Override
     public void Especial() {
-    }
-
-    @Override
-    public void Status() {
-        System.out.println("------------------------");
-        System.out.println("Nome: " + this.getNome());
-        System.out.println("Level: " + this.getLevel());
-        System.out.println("Inteligência: " + this.getInteligencia());
-        System.out.println("Resistência: " + this.getResistencia());
-        System.out.println("Força: " + this.getForca());
-        System.out.println("Agilidade: " + this.getAgilidade());
-        System.out.println("Destreza: " + this.getDestreza());
-        System.out.println("Vida: " + this.getbVida());
-        System.out.println("------------------------");
     }
 
     public String getNome() {
@@ -120,6 +102,7 @@ public class Undead extends Jogador{
     public void setbVida(int bVida) {
         this.bVida = bVida;
     }
+    
     
     
 }

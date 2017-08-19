@@ -5,6 +5,8 @@
  */
 package rpii;
 
+import inimigos.UndeadIA;
+import raca.Undead;
 import java.util.Scanner;
 
 /**
@@ -21,7 +23,8 @@ public class RPII {
         String n;
         System.out.print("Digite o seu nome: ");
         n = input.nextLine();
-        Undead Jogador = new Undead(n, 1, 2, 3, 4, 5, 6, 7);
+        Classe arq = new Arqueiro();
+        Jogador Jogador = new Undead(n, arq);
         UndeadIA Inimigo1 = new UndeadIA("Juarez", 2, 3, 4, 5, 6, 7);
         String acao;
         System.out.println("Voce é o "+n+" e quer saber o seu status, oq vc faz?");

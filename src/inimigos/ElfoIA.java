@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package rpii;
+package inimigos;
 
 /**
  *
  * @author unipampa
  */
-public class OrcIA extends Inimigo{
+public class ElfoIA extends Inimigo{
 
-    public OrcIA(String nome, int inteligencia, int resistencia, int forca, int agilidade, int destreza, int bVida) {
+    public ElfoIA(String nome, int inteligencia, int resistencia, int forca, int agilidade, int destreza, int bVida) {
         super(nome, inteligencia, resistencia, forca, agilidade, destreza, bVida);
     }
 

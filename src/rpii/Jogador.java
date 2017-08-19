@@ -20,19 +20,18 @@ public abstract class Jogador {
     protected int destreza;
     protected int bVida;
 
-    public Jogador(String nome, int level, int inteligencia, int resistencia, int forca, int agilidade, int destreza, int bVida) {
+    public Jogador(String nome, Classe classeJogador) {
         this.nome = nome;
-        this.level = level;
-        this.inteligencia = inteligencia;
-        this.resistencia = resistencia;
-        this.forca = forca;
-        this.agilidade = agilidade;
-        this.destreza = destreza;
-        this.bVida = bVida;
+        this.level = 1;
+        this.inteligencia = classeJogador.getInteligencia();
+        this.resistencia = classeJogador.getResistencia();
+        this.forca = classeJogador.getForca();
+        this.agilidade = classeJogador.getAgilidade();
+        this.destreza = classeJogador.getDestreza();
+        this.bVida = classeJogador.getbVida();
     }
     
-    
-    
+
      public abstract void Atacar();
      public abstract void Defender();
      public abstract void Fugir(); //tentar fugir

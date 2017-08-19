@@ -3,20 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package rpii;
+package raca;
+
+import rpii.Classe;
+import rpii.Jogador;
 
 /**
  *
  * @author unipampa
  */
-public class Humano extends Jogador{
+public class Anao extends Jogador{
 
-    public Humano(String nome, int level, int inteligencia, int resistencia, int forca, int agilidade, int destreza, int bVida) {
-        super(nome, level, inteligencia, resistencia, forca, agilidade, destreza, bVida);
+    public Anao(String nome, Classe classeJogador) {
+        super(nome, classeJogador);     
     }
 
-    
-    
     @Override
     public void Atacar() {
     }

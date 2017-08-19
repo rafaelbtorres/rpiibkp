@@ -5,56 +5,23 @@
  */
 package rpii;
 
+import itens.armas.Armas;
+
 /**
  *
- * @author unipampa
+ * @author leonardo
  */
-public class ElfoIA extends Inimigo{
+public abstract class Classe {
+    
+    protected int inteligencia;
+    protected int resistencia;
+    protected int forca;
+    protected int agilidade;
+    protected int destreza;
+    protected int bVida;
+    protected Armas arma;
 
-    public ElfoIA(String nome, int inteligencia, int resistencia, int forca, int agilidade, int destreza, int bVida) {
-        super(nome, inteligencia, resistencia, forca, agilidade, destreza, bVida);
-    }
-
-    @Override
-    public void Atacar() {
-    }
-
-    @Override
-    public void Defender() {
-    }
-
-    @Override
-    public void Desviar() {
-    }
-
-    @Override
-    public void ReducaoVida() {
-    }
-
-    @Override
-    public void AumentoVida() {
-    }
-
-    @Override
-    public void Especial() {
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
+    
     public int getInteligencia() {
         return inteligencia;
     }
@@ -102,7 +69,6 @@ public class ElfoIA extends Inimigo{
     public void setbVida(int bVida) {
         this.bVida = bVida;
     }
-    
-    
+
     
 }

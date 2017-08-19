@@ -3,16 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package rpii;
+package raca;
+
+import rpii.Classe;
+import rpii.Jogador;
 
 /**
  *
  * @author unipampa
  */
-public class UndeadIA extends Inimigo{
+public class Undead extends Jogador{
 
-    public UndeadIA(String nome, int inteligencia, int resistencia, int forca, int agilidade, int destreza, int bVida) {
-        super(nome, inteligencia, resistencia, forca, agilidade, destreza, bVida);
+    public Undead(String nome, Classe classeJogador) {
+        super(nome, classeJogador);     
     }
 
     @Override
@@ -21,6 +24,10 @@ public class UndeadIA extends Inimigo{
 
     @Override
     public void Defender() {
+    }
+
+    @Override
+    public void Fugir() {
     }
 
     @Override
@@ -38,8 +45,9 @@ public class UndeadIA extends Inimigo{
     @Override
     public void Especial() {
     }
-    
-    public void Status(){
+
+    @Override
+    public void Status() {
         System.out.println("------------------------");
         System.out.println("Nome: " + this.getNome());
         System.out.println("Level: " + this.getLevel());
@@ -115,7 +123,6 @@ public class UndeadIA extends Inimigo{
     public void setbVida(int bVida) {
         this.bVida = bVida;
     }
-    
     
     
 }
