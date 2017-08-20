@@ -5,6 +5,10 @@
  */
 package raca;
 
+import itens.armas.Arco;
+import itens.armas.Cajado;
+import itens.armas.Espada;
+import java.util.Random;
 import rpii.Classe;
 import rpii.Jogador;
 
@@ -12,30 +16,42 @@ import rpii.Jogador;
  *
  * @author unipampa
  */
-public class Undead extends Jogador{
+public class Undead extends Jogador {
 
     public Undead(String nome, Classe classeJogador) {
-        super(nome, classeJogador);     
+        super(nome, classeJogador);
     }
 
     @Override
-    public void Atacar() {
+    public int Atacar() {
+        if (this.getArma() instanceof Cajado) {
+            return getArma().getDano() * Integer.parseInt("1.5") + this.getInteligencia();
+        } else if (this.getArma() instanceof Espada) {
+            return getArma().getDano();
+        } else if (this.getArma() instanceof Arco) {
+            return getArma().getDano();
+        }
+        return 0;
     }
 
     @Override
-    public void Defender() {
+    public void Defender(int dano) {
+        int x = dano - this.getResistencia();
+        if (x > 0) {
+            this.setbVidaAtual(x);
+            this.setResistencia(0);
+        } else {
+            this.setResistencia(x * -1);
+        }
     }
 
     @Override
-    public void Fugir() {
-    }
-
-    @Override
-    public void Desviar() {
-    }
-
-    @Override
-    public void ReducaoVida() {
+    public boolean Desviar() {
+        Random x = new Random();
+        if (x.nextDouble() < 0.25) {
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -60,69 +76,4 @@ public class Undead extends Jogador{
         System.out.println("------------------------");
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
-    public int getInteligencia() {
-        return inteligencia;
-    }
-
-    public void setInteligencia(int inteligencia) {
-        this.inteligencia = inteligencia;
-    }
-
-    public int getResistencia() {
-        return resistencia;
-    }
-
-    public void setResistencia(int resistencia) {
-        this.resistencia = resistencia;
-    }
-
-    public int getForca() {
-        return forca;
-    }
-
-    public void setForca(int forca) {
-        this.forca = forca;
-    }
-
-    public int getAgilidade() {
-        return agilidade;
-    }
-
-    public void setAgilidade(int agilidade) {
-        this.agilidade = agilidade;
-    }
-
-    public int getDestreza() {
-        return destreza;
-    }
-
-    public void setDestreza(int destreza) {
-        this.destreza = destreza;
-    }
-
-    public int getbVida() {
-        return bVida;
-    }
-
-    public void setbVida(int bVida) {
-        this.bVida = bVida;
-    }
-    
-    
 }

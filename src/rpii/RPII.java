@@ -6,6 +6,7 @@
 package rpii;
 
 import inimigos.UndeadIA;
+import java.util.Random;
 import raca.Undead;
 import java.util.Scanner;
 
@@ -32,8 +33,12 @@ public class RPII {
         switch(acao){
             case "status": Jogador.Status();
             case "abrir":
+                
         }
-        
+        Random x = new Random();
+        for (int i = 0; i < 100; i++) {              
+        System.out.println(x.nextDouble());
+        }
     }
     
 }

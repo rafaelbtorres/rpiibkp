@@ -10,7 +10,7 @@ package itens.armas;
  * @author unipampa
  */
 public abstract class Armas {
-    
+
     protected int dano;
     protected int defesa;
     protected int magia;
@@ -38,6 +38,6 @@ public abstract class Armas {
     public void setMagia(int magia) {
         this.magia = magia;
     }
-    
+
     public abstract void ExibirStatus();
 }

@@ -70,5 +70,14 @@ public abstract class Classe {
         this.bVida = bVida;
     }
 
+    public Armas getArma() {
+        return arma;
+    }
+
+    public void setArma(Armas arma) {
+        this.arma = arma;
+    }
+    
+
     
 }

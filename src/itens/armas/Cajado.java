@@ -10,16 +10,10 @@ package itens.armas;
  * @author unipampa
  */
 public class Cajado extends Armas {
-    private int adicionalInteligencia;
     private String nome;
+    
 
-    public int getAdicionalInteligencia() {
-        return adicionalInteligencia;
-    }
-
-    public void setAdicionalInteligencia(int adicionalInteligencia) {
-        this.adicionalInteligencia = adicionalInteligencia;
-    }
+   
 
     public String getNome() {
         return nome;

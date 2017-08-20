@@ -10,6 +10,7 @@ package itens.armas;
  * @author unipampa
  */
 public class Espada extends Armas {
+
     private int adicionalDano;
     private String nome;
 
@@ -32,6 +33,5 @@ public class Espada extends Armas {
     @Override
     public void ExibirStatus() {
     }
-    
-    
+
 }

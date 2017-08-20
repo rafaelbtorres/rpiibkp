@@ -5,6 +5,10 @@
  */
 package raca;
 
+import itens.armas.Arco;
+import itens.armas.Cajado;
+import itens.armas.Espada;
+import java.util.Random;
 import rpii.Classe;
 import rpii.Jogador;
 
@@ -12,30 +16,42 @@ import rpii.Jogador;
  *
  * @author unipampa
  */
-public class Humano extends Jogador{
+public class Humano extends Jogador {
 
     public Humano(String nome, Classe classeJogador) {
-        super(nome, classeJogador);     
-    }
-    
-    @Override
-    public void Atacar() {
+        super(nome, classeJogador);
     }
 
     @Override
-    public void Defender() {
+    public int Atacar() {
+        if (this.getArma() instanceof Cajado) {
+            return getArma().getDano();
+        } else if (this.getArma() instanceof Espada) {
+            return getArma().getDano();
+        } else if (this.getArma() instanceof Arco) {
+            return getArma().getDano();
+        }
+        return 0;
     }
 
     @Override
-    public void Fugir() {
+    public void Defender(int dano) {
+        int x = dano - this.getResistencia();
+        if(x>0){
+            this.setbVidaAtual(x);
+            this.setResistencia(0);
+        }else{
+            this.setResistencia(x*-1);
+        }
     }
 
     @Override
-    public void Desviar() {
-    }
-
-    @Override
-    public void ReducaoVida() {
+    public boolean Desviar() {
+        Random x = new Random();
+        if (x.nextDouble() < 0.25) {
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -49,5 +65,5 @@ public class Humano extends Jogador{
     @Override
     public void Status() {
     }
-    
+
 }
