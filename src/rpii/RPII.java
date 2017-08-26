@@ -29,7 +29,8 @@ public class RPII {
             if (resp > 0 && resp < 4) {
                 if (resp == 1) {
                     System.out.println("Digite seu nome, jogador!: ");
-                    nome = e.next();
+                    e.nextLine();
+                    nome = e.nextLine();
                     System.out.println("Agora, digite sua idade: ");
                     idade = e.nextInt();
                     Fase1 c = new Fase1(nome, idade);
