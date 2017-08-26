@@ -69,6 +69,18 @@ public class Fase1 {
             if (resp == 1) {
                 break;
             }
+            if (resp == 2) {
+                break;
+            }
+            if (resp == 3) {
+                break;
+            }
+            if (resp == 4) {
+                break;
+            }
+            if (resp == 5) {
+                break;
+            }
             System.out.println("Numero invalido, tente novamente\n"
                     + "1-HUMANO   2-ELFO   3-ORC   4-ANAO   5-UNDEAD");
             resp = e.nextInt();
