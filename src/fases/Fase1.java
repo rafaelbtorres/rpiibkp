@@ -27,12 +27,12 @@ public class Fase1 {
     public long ato1() {
         Scanner e = new Scanner(System.in);
         System.out.println("."
-                + ".#####...######..##...##..........##..##..######..##..##..#####....####..\n" +
-                  ".##..##..##......###.###..........##..##....##....###.##..##..##..##..##.\n" +
-                  ".#####...####....##.#.##..........##..##....##....##.###..##..##..##..##.\n" +
-                  ".##..##..##......##...##...........####.....##....##..##..##..##..##..##.\n" +
-                  ".#####...######..##...##............##....######..##..##..#####....####..\n" +
-                    ".........................................................................");
+                + ".#####...######..##...##..........##..##..######..##..##..#####....####..\n"
+                + ".##..##..##......###.###..........##..##....##....###.##..##..##..##..##.\n"
+                + ".#####...####....##.#.##..........##..##....##....##.###..##..##..##..##.\n"
+                + ".##..##..##......##...##...........####.....##....##..##..##..##..##..##.\n"
+                + ".#####...######..##...##............##....######..##..##..#####....####..\n"
+                + ".........................................................................");
         System.out.println("Pois bem, então " + jogador + " parte em sua longa jornada.\n"
                 + "Nos arredores da vila Kenko, você descança, sem abrir os olhos voce pensa: acordo ou durmo mais um pouco?\n"
                 + "1-SEGUIR DORMINDO   2-ACORDAR");
@@ -51,40 +51,40 @@ public class Fase1 {
             resp = e.nextInt();
         }
         System.out.println("Abrindo os olhos, ainda meio confuso, percebe que esqueceu de apagar a vela, e agora o cheiro de cera invade o recinto.\n"
-                    + "          1$           \n" +
-                    "           .MM           \n" +
-                    "          .M MM          \n" +
-                    "          #M  M,         \n" +
-                    "          7M  M,         \n" +
-                    "            ;;           \n" +
-                    "            b;           \n" +
-                    "          MMMMMU         \n" +
-                    "          MMMMMM         \n" +
-                    "          $M@MMC         \n" +
-                    "          #MM@M:         \n" +
-                    "          iM@MM;         \n" +
-                    "          ;M@@Mi         \n" +
-                    "          :M@MM:         \n" +
-                    "          YM@@MI         \n" +
-                    "zMMMMMMMMMMM@@@MMMMMMMMMM\n" +
-                    "  :XbW@@MMM#@@@@MMM@$b1: "
+                + "          1$           \n"
+                + "           .MM           \n"
+                + "          .M MM          \n"
+                + "          #M  M,         \n"
+                + "          7M  M,         \n"
+                + "            ;;           \n"
+                + "            b;           \n"
+                + "          MMMMMU         \n"
+                + "          MMMMMM         \n"
+                + "          $M@MMC         \n"
+                + "          #MM@M:         \n"
+                + "          iM@MM;         \n"
+                + "          ;M@@Mi         \n"
+                + "          :M@MM:         \n"
+                + "          YM@@MI         \n"
+                + "zMMMMMMMMMMM@@@MMMMMMMMMM\n"
+                + "  :XbW@@MMM#@@@@MMM@$b1: "
                 + "1-APAGAR VELA   2-IR AO BANHEIRO");
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
                 System.out.println("Vela apagada!\n"
-                            + "          ;;           \n" +
-                            "            ;;           \n" +
-                            "          MMMMMU         \n" +
-                            "          MMMMMM         \n" +
-                            "          $M@MMC         \n" +
-                            "          #MM@M:         \n" +
-                            "          iM@MM;         \n" +
-                            "          ;M@@Mi         \n" +
-                            "          :M@MM:         \n" +
-                            "          YM@@MI         \n" +
-                            "zMMMMMMMMMMM@@@MMMMMMMMMM\n" +
-                            "  :XbW@@MMM#@@@@MMM@$b1: ");
+                        + "          ;;           \n"
+                        + "            ;;           \n"
+                        + "          MMMMMU         \n"
+                        + "          MMMMMM         \n"
+                        + "          $M@MMC         \n"
+                        + "          #MM@M:         \n"
+                        + "          iM@MM;         \n"
+                        + "          ;M@@Mi         \n"
+                        + "          :M@MM:         \n"
+                        + "          YM@@MI         \n"
+                        + "zMMMMMMMMMMM@@@MMMMMMMMMM\n"
+                        + "  :XbW@@MMM#@@@@MMM@$b1: ");
                 break;
             }
             if (resp == 2) {
@@ -101,8 +101,20 @@ public class Fase1 {
                 + "Qual será sua classe?\n"
                 + "1-HUMANO   2-ELFO   3-ORC   4-ANAO   5-UNDEAD");
         resp = e.nextInt();
-        while (resp != 1 || resp != 2 || resp==3 || resp==4 || resp==5) {
+        while (resp != 1 || resp != 2 || resp == 3 || resp == 4 || resp == 5) {
             if (resp == 1) {
+                break;
+            }
+            if (resp == 2) {
+                break;
+            }
+            if (resp == 3) {
+                break;
+            }
+            if (resp == 4) {
+                break;
+            }
+            if (resp == 5) {
                 break;
             }
             System.out.println("Numero invalido, tente novamente\n"
@@ -116,8 +128,20 @@ public class Fase1 {
                 System.out.println("Qual será sua classe?\n"
                         + "1-HUMANO   2-ELFO   3-ORC   4-ANAO   5-UNDEAD");
                 resp = e.nextInt();
-                while (resp != 1 || resp != 2 || resp==3 || resp==4 || resp==5) {
+                while (resp != 1 || resp != 2 || resp == 3 || resp == 4 || resp == 5) {
                     if (resp == 1) {
+                        break;
+                    }
+                    if (resp == 2) {
+                        break;
+                    }
+                    if (resp == 3) {
+                        break;
+                    }
+                    if (resp == 4) {
+                        break;
+                    }
+                    if (resp == 5) {
                         break;
                     }
                     System.out.println("Numero invalido, tente novamente\n"
@@ -154,7 +178,7 @@ public class Fase1 {
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 2) {
-                System.out.println("Voce nao ecnontra nada, sua barriga esta roncando e sua saude diminuindo, entao sai da casa.");
+                System.out.println("Voce nao encontra nada, sua barriga esta roncando e sua saude diminuindo, entao sai da casa.");
                 break;
             }
             if (resp == 1) {
