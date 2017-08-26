@@ -5,6 +5,7 @@
  */
 package rpii;
 
+import fases.Fase1;
 import inimigos.UndeadIA;
 import java.util.Random;
 import raca.Undead;
@@ -16,28 +17,39 @@ import java.util.Scanner;
  */
 public class RPII {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        String n;
-        System.out.print("Digite o seu nome: ");
-        n = input.nextLine();
-        Classe arq = new Arqueiro();
-        Jogador Jogador = new Undead(n, arq);
-        UndeadIA Inimigo1 = new UndeadIA("Juarez", 2, 3, 4, 5, 6, 7);
-        String acao;
-        System.out.println("Voce é o "+n+" e quer saber o seu status, oq vc faz?");
-        acao = input.nextLine();
-        switch(acao){
-            case "status": Jogador.Status();
-            case "abrir":
-                
-        }
-        Random x = new Random();
-        for (int i = 0; i < 100; i++) {              
-        System.out.println(x.nextDouble());
+    public static void main(String args[]) {
+        Scanner e = new Scanner(System.in);
+        int resp, idade;
+        String nome;
+        resp = 0;
+        System.out.println("Bem vindo ao MUD, Oque deseja fazer? ");
+        while (resp != 1 || resp != 2 || resp != 3) {
+            System.out.println("1- Iniciar novo jogo 2- Sair 3- Obter ajuda");
+            resp = e.nextInt();
+            if (resp > 0 && resp < 4) {
+                if (resp == 1) {
+                    System.out.println("Digite seu nome, jogador!: ");
+                    nome = e.next();
+                    System.out.println("Agora, digite sua idade: ");
+                    idade = e.nextInt();
+                    Fase1 c = new Fase1(nome, idade);
+                    c.Enredo();
+                    System.out.println("Você está pronto para começar essa jornada? 1- SIM 2- AINDA NAO");
+                    int res = e.nextInt();
+                    if (res == 1) {
+                        c.ato1();
+                    }
+                    break;
+                }
+                if (resp == 2) {
+
+                }
+                if (resp == 3) {
+
+                }
+            } else {
+                System.out.println("Opcao invalida, tente novamente!");
+            }
         }
     }
     
