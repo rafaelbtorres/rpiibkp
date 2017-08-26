@@ -51,11 +51,40 @@ public class Fase1 {
             resp = e.nextInt();
         }
         System.out.println("Abrindo os olhos, ainda meio confuso, percebe que esqueceu de apagar a vela, e agora o cheiro de cera invade o recinto.\n"
+                    + "          1$           \n" +
+                    "           .MM           \n" +
+                    "          .M MM          \n" +
+                    "          #M  M,         \n" +
+                    "          7M  M,         \n" +
+                    "            ;;           \n" +
+                    "            b;           \n" +
+                    "          MMMMMU         \n" +
+                    "          MMMMMM         \n" +
+                    "          $M@MMC         \n" +
+                    "          #MM@M:         \n" +
+                    "          iM@MM;         \n" +
+                    "          ;M@@Mi         \n" +
+                    "          :M@MM:         \n" +
+                    "          YM@@MI         \n" +
+                    "zMMMMMMMMMMM@@@MMMMMMMMMM\n" +
+                    "  :XbW@@MMM#@@@@MMM@$b1: "
                 + "1-APAGAR VELA   2-IR AO BANHEIRO");
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
-                System.out.println("Vela apagada!");
+                System.out.println("Vela apagada!\n"
+                            + "          ;;           \n" +
+                            "            ;;           \n" +
+                            "          MMMMMU         \n" +
+                            "          MMMMMM         \n" +
+                            "          $M@MMC         \n" +
+                            "          #MM@M:         \n" +
+                            "          iM@MM;         \n" +
+                            "          ;M@@Mi         \n" +
+                            "          :M@MM:         \n" +
+                            "          YM@@MI         \n" +
+                            "zMMMMMMMMMMM@@@MMMMMMMMMM\n" +
+                            "  :XbW@@MMM#@@@@MMM@$b1: ");
                 break;
             }
             if (resp == 2) {
