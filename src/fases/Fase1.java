@@ -26,6 +26,13 @@ public class Fase1 {
 
     public long ato1() {
         Scanner e = new Scanner(System.in);
+        System.out.println("."
+                + ".#####...######..##...##..........##..##..######..##..##..#####....####..\n" +
+                  ".##..##..##......###.###..........##..##....##....###.##..##..##..##..##.\n" +
+                  ".#####...####....##.#.##..........##..##....##....##.###..##..##..##..##.\n" +
+                  ".##..##..##......##...##...........####.....##....##..##..##..##..##..##.\n" +
+                  ".#####...######..##...##............##....######..##..##..#####....####..\n" +
+                    ".........................................................................");
         System.out.println("Pois bem, então " + jogador + " parte em sua longa jornada.\n"
                 + "Nos arredores da vila Kenko, você descança, sem abrir os olhos voce pensa: acordo ou durmo mais um pouco?\n"
                 + "1-SEGUIR DORMINDO   2-ACORDAR");
@@ -67,18 +74,6 @@ public class Fase1 {
         resp = e.nextInt();
         while (resp != 1 || resp != 2 || resp==3 || resp==4 || resp==5) {
             if (resp == 1) {
-                break;
-            }
-            if (resp == 2) {
-                break;
-            }
-            if (resp == 3) {
-                break;
-            }
-            if (resp == 4) {
-                break;
-            }
-            if (resp == 5) {
                 break;
             }
             System.out.println("Numero invalido, tente novamente\n"
