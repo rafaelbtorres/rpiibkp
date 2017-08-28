@@ -1,6 +1,10 @@
 package fases;
 
+
+import static audio.Som.inicio;
+import static audio.Som.musica;
 import java.util.Scanner;
+
 
 public class Fase1 {
 
@@ -12,7 +16,8 @@ public class Fase1 {
         this.idade = idade;
     }
 
-    public long Enredo() {
+    public long Enredo() throws Exception {
+        //inicio();
         System.out.println("");
         System.out.println(jogador + ", vive numa pequena vila hermitao, se exilou, passado obscuro voltando de uma cacada, avista fumaca vindo da vila proxima \n"
                 + "onde estao todos os seus amigos, encontra um sobrevivente nos escombros, que lhe conta quem destruiu, vagamente, e morre() \n"
@@ -24,7 +29,8 @@ public class Fase1 {
         return 0;
     }
 
-    public long ato1() {
+    public long ato1() throws Exception {
+          
         Scanner e = new Scanner(System.in);
         System.out.println("."
                 + ".#####...######..##...##..........##..##..######..##..##..#####....####..\n"
@@ -51,7 +57,7 @@ public class Fase1 {
             resp = e.nextInt();
         }
         System.out.println("Abrindo os olhos, ainda meio confuso, percebe que esqueceu de apagar a vela, e agora o cheiro de cera invade o recinto.\n"
-                + "          1$           \n"
+                + "            1$           \n"
                 + "           .MM           \n"
                 + "          .M MM          \n"
                 + "          #M  M,         \n"
@@ -67,13 +73,13 @@ public class Fase1 {
                 + "          :M@MM:         \n"
                 + "          YM@@MI         \n"
                 + "zMMMMMMMMMMM@@@MMMMMMMMMM\n"
-                + "  :XbW@@MMM#@@@@MMM@$b1: "
+                + "  :XbW@@MMM#@@@@MMM@$b1:\n\n "
                 + "1-APAGAR VELA   2-IR AO BANHEIRO");
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
-                System.out.println("Vela apagada!\n"
-                        + "          ;;           \n"
+                System.out.println("\n"
+                        + "            ;;           \n"
                         + "            ;;           \n"
                         + "          MMMMMU         \n"
                         + "          MMMMMM         \n"
@@ -84,7 +90,8 @@ public class Fase1 {
                         + "          :M@MM:         \n"
                         + "          YM@@MI         \n"
                         + "zMMMMMMMMMMM@@@MMMMMMMMMM\n"
-                        + "  :XbW@@MMM#@@@@MMM@$b1: ");
+                        + "  :XbW@@MMM#@@@@MMM@$b1:\n\n"
+                        + "Vela apagada!\n ");
                 break;
             }
             if (resp == 2) {
