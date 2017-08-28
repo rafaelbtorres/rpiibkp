@@ -5,6 +5,7 @@
  */
 package rpii;
 
+import audio.Som;
 import static audio.Som.inicio;
 import static audio.Som.musica;
 import fases.Fase1;
@@ -26,7 +27,7 @@ public class RPII {
 
     public static void main(String args[]) throws Exception {
         System.out.println("CARREGANDO, aguarde um momento por favor!");
-        inicio();
+        String musica = inicio();
         Scanner e = new Scanner(System.in);
         int resp, idade;
         String nome;
@@ -47,6 +48,7 @@ public class RPII {
                     System.out.println("Você está pronto para começar essa jornada? 1- SIM 2- AINDA NAO");
                     int res = e.nextInt();
                     if (res == 1) {
+                        Som.parar(musica);
                         c.ato1();
                     }
                     break;
