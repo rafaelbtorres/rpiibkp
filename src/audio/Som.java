@@ -1,27 +1,19 @@
 package audio;
+
 import java.io.*;
 import sun.audio.*;
 
 public class Som {
-     public static String inicio() throws Exception {
+    String musica;
+
+    public static void inicio() throws Exception {
         //mudar o caminho para cada maquina
-        String musica = "/home/rafael/NetBeansProjects/RPIIMUD/src/audio/inicio.wav";
-        InputStream in = new FileInputStream(musica);
-        AudioStream audio = new AudioStream(in);
+        AudioStream audio = new AudioStream(new FileInputStream("C:\\Users\\Rafael\\Documents\\NetBeansProjects\\RPIIMUD\\src\\audio\\musica.wav"));
         AudioPlayer.player.start(audio);
-        return musica;
+        ContinuousAudioDataStream loop ;
     }
-     public static void parar(String musica) throws Exception{
-         InputStream in = new FileInputStream(musica);
-         AudioStream audio = new AudioStream(in);
-         AudioPlayer.player.stop(audio);  
+     public static void parar() throws Exception{
+         AudioStream audio = new AudioStream(new FileInputStream("C:\\Users\\Rafael\\Documents\\NetBeansProjects\\RPIIMUD\\src\\audio\\musica.wav"));
+         AudioPlayer.player.stop(audio); 
      }
-    
-    public static void musica() throws Exception {
-        //mudar o caminho para cada maquina      
-        String musica = "/home/rafael/NetBeansProjects/RPIIMUD/src/audio/fundo.wav";
-        InputStream in = new FileInputStream(musica);
-        AudioStream audio = new AudioStream(in);
-        AudioPlayer.player.start(audio);
-    }          
 }

@@ -1,8 +1,8 @@
 package fases;
 
 
-import static audio.Som.inicio;
-import static audio.Som.musica;
+
+import static audio.Som.parar;
 import java.util.Scanner;
 
 
@@ -29,6 +29,7 @@ public class Fase1 {
     }
 
     public long ato1() throws Exception {
+        parar();
           
         Scanner e = new Scanner(System.in);
         System.out.println("."
