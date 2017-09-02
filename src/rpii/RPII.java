@@ -5,8 +5,11 @@
  */
 package rpii;
 
+import audio.Som;
+import static audio.Som.inicio;
 import fases.Fase1;
 import inimigos.UndeadIA;
+import java.net.URL;
 import java.util.Random;
 import raca.Undead;
 import java.util.Scanner;
@@ -17,7 +20,8 @@ import java.util.Scanner;
  */
 public class RPII {
 
-    public static void main(String args[]) {
+    public static void main(String args[]) throws Exception {
+        inicio();
         Scanner e = new Scanner(System.in);
         int resp, idade;
         String nome;
@@ -29,7 +33,8 @@ public class RPII {
             if (resp > 0 && resp < 4) {
                 if (resp == 1) {
                     System.out.println("Digite seu nome, jogador!: ");
-                    nome = e.next();
+                    e.nextLine();
+                    nome = e.nextLine();
                     System.out.println("Agora, digite sua idade: ");
                     idade = e.nextInt();
                     Fase1 c = new Fase1(nome, idade);

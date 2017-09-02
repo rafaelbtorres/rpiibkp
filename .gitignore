@@ -22,3 +22,9 @@
 hs_err_pid*
 /build/
 /nbproject/private/
+/src/Jplay/build/
+/src/Jplay/dist/
+/src/Jplay/nbproject/private/
+/test/Jplay/build/
+/test/Jplay/dist/
+/test/Jplay/nbproject/private/
