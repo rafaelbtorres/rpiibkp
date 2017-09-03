@@ -29,7 +29,7 @@ public class Elfo extends Jogador {
         } else if (this.getArma() instanceof Espada) {
             return getArma().getDano();
         } else if (this.getArma() instanceof Arco) {
-            return getArma().getDano() * Integer.parseInt("1.5") + this.getDestreza();
+            return (int)(getArma().getDano() * 1.5 + this.getDestreza());
         }
         return 0;
     }
@@ -48,10 +48,7 @@ public class Elfo extends Jogador {
     @Override
     public boolean Desviar() {
         Random x = new Random();
-        if (x.nextDouble() < 0.25) {
-            return true;
-        }
-        return false;
+        return x.nextDouble() < 0.25;
     }
 
     @Override

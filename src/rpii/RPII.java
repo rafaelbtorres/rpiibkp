@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package rpii;
 
 import audio.Som;
@@ -18,6 +13,7 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.SwingUtilities;
+import sun.audio.AudioStream;
 
 /**
  *
@@ -26,8 +22,7 @@ import javax.swing.SwingUtilities;
 public class RPII {
 
     public static void main(String args[]) throws Exception {
-        System.out.println("CARREGANDO, aguarde um momento por favor!");
-        String musica = inicio();
+        AudioStream musica = inicio();
         Scanner e = new Scanner(System.in);
         int resp, idade;
         String nome;
