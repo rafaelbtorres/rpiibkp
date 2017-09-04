@@ -17,7 +17,7 @@ public class Fase1 {
     }
 
     public long Enredo() throws Exception {
-        System.out.println("");
+        //System.out.println("");
         System.out.println(jogador + ", vive numa pequena vila hermitao, se exilou, passado obscuro voltando de uma cacada, avista fumaca vindo da vila proxima \n"
                 + "onde estao todos os seus amigos, encontra um sobrevivente nos escombros, que lhe conta quem destruiu, vagamente, e morre() \n"
                 + "foi a caravana... disse o sobrevivente usando toda sua energia que o mantinha vivo " + jogador + " se lembra que eles estão buscando artefatos\n"
