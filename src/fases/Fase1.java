@@ -2,8 +2,12 @@ package fases;
 
 
 
+import audio.Som;
+import static audio.Som.cervo;
+import static audio.Som.fase1;
 import static audio.Som.parar;
 import java.util.Scanner;
+import sun.audio.AudioStream;
 
 
 public class Fase1 {
@@ -17,7 +21,8 @@ public class Fase1 {
     }
 
     public long Enredo() throws Exception {
-        //System.out.println("");
+        AudioStream musica = fase1();
+        System.out.println("");
         System.out.println(jogador + ", vive numa pequena vila hermitao, se exilou, passado obscuro voltando de uma cacada, avista fumaca vindo da vila proxima \n"
                 + "onde estao todos os seus amigos, encontra um sobrevivente nos escombros, que lhe conta quem destruiu, vagamente, e morre() \n"
                 + "foi a caravana... disse o sobrevivente usando toda sua energia que o mantinha vivo " + jogador + " se lembra que eles estão buscando artefatos\n"
@@ -29,8 +34,6 @@ public class Fase1 {
     }
 
     public long ato1() throws Exception {
-        parar();
-          
         Scanner e = new Scanner(System.in);
         System.out.println("."
                 + ".#####...######..##...##..........##..##..######..##..##..#####....####..\n"
@@ -55,7 +58,7 @@ public class Fase1 {
             System.out.println("Numero invalido, tente novamente\n"
                     + "1-SEGUIR DORMINDO   2-ACORDAR");
             resp = e.nextInt();
-        }
+        }       
         System.out.println("Abrindo os olhos, ainda meio confuso, percebe que esqueceu de apagar a vela, e agora o cheiro de cera invade o recinto.\n"
                 + "            1$           \n"
                 + "           .MM           \n"
@@ -195,6 +198,7 @@ public class Fase1 {
                     + "1-SAIR DA CASA   2-PROCURAR POR COMIDA DENTRO DA CASA");
             resp = e.nextInt();
         }
+        Som.porta();
         System.out.println("Ao sair, vislumbra seu pequeno casebre de madeira cedido pelo ancião da vila após voce salva-lo em certa ocasião\n"
                 + "este imóvel é sua morada a alguns anos, sempre solitariamente acolhendo seus pensamentos e seu corpo cansado.\n"
                 + "Virando-se para a densa floresta de Lavitan\n"
@@ -252,7 +256,7 @@ public class Fase1 {
         return 0;
     }
 
-    public long irLeste() {
+    public long irLeste() throws Exception {
         Scanner e = new Scanner(System.in);
         int resp;
         System.out.println("Seguindo adiante neste caminho a vegetação diminui de tamanho, mas nao perdendo em densidade por parte das pequenas vegetações\n"
@@ -276,6 +280,7 @@ public class Fase1 {
                     + "1-ATACAR FEROSMENTE  2-ATACAR SILECIOSAMENTE");
             resp = e.nextInt();
         }
+        AudioStream arco= cervo();
         System.out.println("com um rápido e súbito movimento você lanca-se sobre a fera que num grunhido de dor e aflição cai por terra\n"
                 + "ao lado, voce solta sua bolsa e empunha sua pequena adaga para dilacerar a fera e coletar sua carne e seu couro");
         System.out.println("1-ESFOLAR O ANIMAL");
@@ -292,7 +297,7 @@ public class Fase1 {
         return 1;
     }
 
-    public long irNorte() {
+    public long irNorte() throws Exception {
         Scanner e = new Scanner(System.in);
         int resp;
         System.out.println("Com muitas rochas entre as grandes arvores e arbustos de variados tamanhos, avancar por aqui se torna por vezes bastante dificultoso\n"
@@ -314,6 +319,7 @@ public class Fase1 {
                                 + "voce ja consegue sentir o sabor de sua suculenta carne em sua boca. E com este pensamento prepara-se para o ataque.");
                         System.out.println("1-ATACAR");
                         resp = e.nextInt();
+                        AudioStream arco= cervo();
                         while (resp != 1) {
                             if (resp == 1) {
                                 System.out.println("O cervo mesmo ferido ainda tenta correr para o abrigo da floresta, mas antes de atingir seu objetivo tomba, levantando leivas de grama com sua pesada galhada.");
@@ -365,7 +371,7 @@ public class Fase1 {
         return 2;
     }
 
-    public long ato2() {
+    public long ato2() throws Exception {
         Scanner e = new Scanner(System.in);
         int resp;
         System.out.println("ATO 2");
