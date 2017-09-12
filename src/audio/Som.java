@@ -19,6 +19,7 @@ public class Som {
         AudioPlayer.player.stop(musica);
         return null;
     }
+
     public static AudioStream fase1() throws Exception {
         //mudar o caminho para cada maquina
         AudioStream audio = new AudioStream(new FileInputStream("/home/rafael/NetBeansProjects/RPIIMUD-master/src/audio/musica_fase1.wav"));
@@ -26,6 +27,7 @@ public class Som {
         ContinuousAudioDataStream loop;
         return audio;
     }
+
     public static AudioStream cervo() throws Exception {
         //mudar o caminho para cada maquina
         AudioStream audio = new AudioStream(new FileInputStream("/home/rafael/NetBeansProjects/RPIIMUD-master/src/audio/cervo_morto.wav"));
@@ -33,14 +35,13 @@ public class Som {
         return audio;
 
     }
-      public static AudioStream porta() throws Exception {
+
+    public static AudioStream porta() throws Exception {
         //mudar o caminho para cada maquina
         AudioStream audio = new AudioStream(new FileInputStream("/home/rafael/NetBeansProjects/RPIIMUD-master/src/audio/porta.wav"));
         AudioPlayer.player.start(audio);
+        ContinuousAudioDataStream loop;
         return audio;
-
     }
-
-    
 
 }
