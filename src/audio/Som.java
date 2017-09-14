@@ -6,14 +6,7 @@ import sun.audio.*;
 public class Som {
 
     String musica;
-
-    public static AudioStream inicio() throws Exception {
-        //mudar o caminho para cada maquina
-        AudioStream audio = new AudioStream(new FileInputStream("/home/rafael/NetBeansProjects/RPIIMUD-master/src/audio/musica_menu.wav"));
-        AudioPlayer.player.start(audio);
-        ContinuousAudioDataStream loop;
-        return audio;
-    }
+    private ContinuousAudioDataStream loop;
 
     public static AudioStream parar(AudioStream musica) throws Exception {
         AudioPlayer.player.stop(musica);
@@ -23,6 +16,16 @@ public class Som {
     public static AudioStream fase1() throws Exception {
         //mudar o caminho para cada maquina
         AudioStream audio = new AudioStream(new FileInputStream("/home/rafael/NetBeansProjects/RPIIMUD-master/src/audio/musica_fase1.wav"));
+        AudioPlayer.player.start(audio);
+        //AudioData teste = audio.getData();
+        //ContinuousAudioDataStream music = new ContinuousAudioDataStream(teste);
+
+        return audio;
+    }
+
+    public static AudioStream ato2() throws Exception {
+        //mudar o caminho para cada maquina
+        AudioStream audio = new AudioStream(new FileInputStream("C:\\Users\\Rafael\\Documents\\NetBeansProjects\\RPIIMUD\\src\\audio\\musica_ato2.wav"));
         AudioPlayer.player.start(audio);
         ContinuousAudioDataStream loop;
         return audio;

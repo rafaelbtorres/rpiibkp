@@ -28,3 +28,4 @@ hs_err_pid*
 /test/Jplay/build/
 /test/Jplay/dist/
 /test/Jplay/nbproject/private/
+/dist/

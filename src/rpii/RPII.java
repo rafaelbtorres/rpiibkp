@@ -1,7 +1,6 @@
 package rpii;
 
 import audio.Som;
-import static audio.Som.inicio;
 import atos.Ato1;
 import atos.Ato2;
 import java.util.Scanner;
@@ -10,7 +9,6 @@ import sun.audio.AudioStream;
 public class RPII {
 
     public static void main(String args[]) throws Exception {
-        AudioStream musica = inicio();
         Scanner e = new Scanner(System.in);
         int resp, idade;
         String nome;
@@ -27,7 +25,7 @@ public class RPII {
                     System.out.println("Agora, digite sua idade: ");
                     idade = e.nextInt();
                     Ato1 c = new Ato1(nome, idade);
-                    Som.parar(musica);
+                    //Som.parar(musica);
                     c.Enredo_1();
                     System.out.println("Você está pronto para começar essa jornada? 1- SIM 2- AINDA NAO");
                     int res = e.nextInt();
@@ -47,7 +45,7 @@ public class RPII {
                             System.out.println("Agora, digite sua idade: ");
                             idade = e.nextInt();
                             Ato1 c = new Ato1(nome, idade);
-                            Som.parar(musica);
+                            //Som.parar(musica);
                             c.Enredo_1();
                             break;
                         }
@@ -55,7 +53,7 @@ public class RPII {
                             System.out.println("Digite seu nome, jogador!: ");
                             String nomes = e.nextLine();
                             Ato2 c = new Ato2(nomes);
-                            Som.parar(musica);
+                            //Som.parar(musica);
                             c.Enredo_2();
                             break;
                         }

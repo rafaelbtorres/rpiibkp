@@ -18,7 +18,7 @@ public class Ato1 {
     }
 
     public long Enredo_1() throws Exception {
-        AudioStream musica = fase1();
+   AudioStream musica = fase1();
         System.out.println("");
         System.out.println(jogador + ", vive numa pequena vila hermitao, se exilou, passado obscuro voltando de uma cacada, avista fumaca vindo da vila proxima \n"
                 + "onde estao todos os seus amigos, encontra um sobrevivente nos escombros, que lhe conta quem destruiu, vagamente, e morre() \n"
@@ -27,6 +27,7 @@ public class Ato1 {
                 + "magia perdida dos antigos contos de taodistante agora, precisa achar pedacos de adamantium pra montar ritual de criacao dessas \n"
                 + "armas sagradas! furioso, " + jogador + " vai para sua casa se preparar para a sua jornada em busca de adamantium para conseguir sua vinganca\n"
                 + " Mas tome CUIDADO! pois o caminho possui altos exercitos e alguns lideres q comandam a hierarquia da caravana");
+        fase_1();
         return 0;
     }
 
@@ -160,13 +161,14 @@ public class Ato1 {
                 break;
             }
             if (resp == 1) {
+                Som.porta();
                 break;
             }
             System.out.println("Numero invalido, tente novamente\n"
                     + "1-SAIR DA CASA   2-PROCURAR POR COMIDA DENTRO DA CASA");
             resp = e.nextInt();
         }
-        Som.porta();
+  
         System.out.println("Ao sair, vislumbra seu pequeno casebre de madeira cedido pelo ancião da vila após voce salva-lo em certa ocasião\n"
                 + "este imóvel é sua morada a alguns anos, sempre solitariamente acolhendo seus pensamentos e seu corpo cansado.\n"
                 + "Virando-se para a densa floresta de Lavitan\n"
